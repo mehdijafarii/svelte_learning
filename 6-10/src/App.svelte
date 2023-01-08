@@ -1,4 +1,6 @@
 <script>
+  import Modal from "./Modal.svelte";
+
   let people = [
     { name: "Rana", age: 31, beltColor: "Black", id: 1 },
     { name: "Mahdi", age: 25, beltColor: "White", id: 2 },
@@ -22,6 +24,7 @@
   <p>Less than 5</p>
 {/if} -->
 
+<Modal />
 <main>
   {#each people as person (person.id)}
     <div>
