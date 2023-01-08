@@ -24,7 +24,7 @@
   <p>Less than 5</p>
 {/if} -->
 
-<Modal />
+<Modal message="Hey from main app svelte!!" isPromo={true} />
 <main>
   {#each people as person (person.id)}
     <div>
