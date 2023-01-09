@@ -13,6 +13,12 @@
     });
   };
 
+  const toggleModal = () => {
+    return (showModel = !showModel);
+  };
+
+  let showModel = false;
+
   // let num = 5;
 </script>
 
@@ -24,8 +30,13 @@
   <p>Less than 5</p>
 {/if} -->
 
-<Modal message="Hey from main app svelte!!" isPromo={true} />
+<Modal
+  message="Hey from main app svelte!!"
+  {showModel}
+  on:click={toggleModal}
+/>
 <main>
+  <button on:click={toggleModal}>Open promotion</button>
   {#each people as person (person.id)}
     <div>
       <h4>{person.name}</h4>

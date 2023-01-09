@@ -1,11 +1,12 @@
 <script>
   export let message = "default value";
-  let showModel = true;
+  export let showModel = false;
   export let isPromo = false;
 </script>
 
 {#if showModel}
-  <div class="backdrop" class:promo={isPromo}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="backdrop" class:promo={isPromo} on:click>
     <div class="modal">
       <p>{message}</p>
     </div>
@@ -24,7 +25,7 @@
     padding: 10px;
     border-radius: 10px;
     max-width: 400px;
-    margin: 10px auto;
+    margin: 10% auto;
     text-align: center;
     background: white;
   }
