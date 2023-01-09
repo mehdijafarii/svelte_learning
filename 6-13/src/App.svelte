@@ -36,7 +36,7 @@
   on:click={toggleModal}
 />
 <main>
-  <button on:click={toggleModal}>Open promotion</button>
+  <button on:click|once={toggleModal}>Open promotion</button>
   {#each people as person (person.id)}
     <div>
       <h4>{person.name}</h4>
